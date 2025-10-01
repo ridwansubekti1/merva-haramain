@@ -34,7 +34,7 @@ export default function Header() {
             />
             <img
               alt="Merva Haramain Logo"
-              src="/logo-dark.png"
+              src="/logo.png"
               className="h-8 w-auto hidden dark:block"
             />
           </Link>
