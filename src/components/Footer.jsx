@@ -24,7 +24,7 @@ export default function Footer() {
         {/* Kolom 1: Logo + sosmed */}
         <div className="flex flex-col items-start space-y-4">
           <Link href="#beranda" className="flex flex-col items-start mt-2 text-lg font-semibold">
-            Merva Travel
+            Merva Haramain
           </Link>
           {/* Ikon Sosmed */}
           <div className="flex space-x-3 mt-3">
@@ -94,7 +94,7 @@ export default function Footer() {
 
       {/* Copyright */}
       <div className="border-t border-green-700 mt-10 pt-6 text-center text-green-100 text-sm">
-        <p>&copy; {new Date().getFullYear()} Merva Travel. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Merva Haramain. All rights reserved.</p>
       </div>
     </footer>
   );

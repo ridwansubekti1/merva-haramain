@@ -25,7 +25,7 @@ export default function Features() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Judul */}
         <h2 className="text-center text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-          Bersama <span className="text-emerald-600">Merva Travel</span>
+          Bersama <span className="text-emerald-600">Merva Haramain</span>
         </h2>
 
         {/* Cards with stagger animation */}

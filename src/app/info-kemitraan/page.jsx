@@ -75,7 +75,9 @@ export default function InfoKemitraan() {
             <div className="space-y-4">
               <div className="flex items-start gap-3">
                 <MapPin className="w-6 h-6 text-green-600 mt-1" />
-                <p className="text-gray-700">Jl. Contoh Alamat No. 123, Jakarta Pusat, Indonesia</p>
+                <p className="text-gray-700">
+                  1.	Perumahan Grand Mulia Kalisuren A. 3/11, Kampung Cina Desa/Kelurahan Tajurhalang, 
+                  Kec. Tajurhalang, Kab. Bogor, Provinsi Jawa Barat Kode Pos: 16320</p>
               </div>
               <div className="flex items-start gap-3">
                 <Phone className="w-6 h-6 text-green-600 mt-1" />

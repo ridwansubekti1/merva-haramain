@@ -27,7 +27,7 @@ export default function HeroAksenHijau() {
               <span className="font-semibold text-green-700">(QS. Al-Baqarah 196)</span>
             </p>
             <p className="mt-6 text-base sm:text-lg text-gray-700">
-              Bersama <span className="font-semibold text-green-700">Merva Travel</span>,
+              Bersama <span className="font-semibold text-green-700">Merva Haramain</span>,
               wujudkan perjalanan suci Anda dengan aman & nyaman.
             </p>
             <div className="mt-8">
