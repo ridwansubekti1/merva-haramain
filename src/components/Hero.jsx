@@ -6,7 +6,7 @@ import { Reveal } from './Reveal'
 
 export default function HeroAksenHijau() {
   return (
-    <section className="relative w-full py-20 bg-gradient-to-br from-green-50 via-white to-green-100">
+    <section className="relative w-full py-20 bg-gradient-to-b from-white via-emerald-50 to-white">
       {/* Aksen Hijau Transparan Bulat */}
       <div className="absolute top-0 left-0 w-72 h-72 bg-green-200/40 rounded-full blur-3xl -z-10" />
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-green-300/30 rounded-full blur-3xl -z-10" />
@@ -19,7 +19,7 @@ export default function HeroAksenHijau() {
               className="text-left text-3xl sm:text-4xl lg:text-5xl leading-tight font-serif text-green-800"
               dir="rtl"
             >
-            وَأَتِمُّوا الْحَجَّ وَالْعُمْرَةَ لِلَّهِ
+              وَأَتِمُّوا الْحَجَّ وَالْعُمْرَةَ لِلَّهِ
             </p>
             <p className="mt-4 text-lg sm:text-xl text-gray-700">
               “Dan sempurnakanlah ibadah haji dan umrah karena Allah.”
@@ -32,14 +32,14 @@ export default function HeroAksenHijau() {
             </p>
             <div className="mt-8">
               <Link
-              href="/paket"
-              className="inline-flex items-center justify-center rounded-md 
-                        bg-gradient-to-r from-green-600 to-green-500 
-                        px-8 py-4 text-base font-semibold text-white 
-                        shadow-lg hover:from-green-500 hover:to-green-400 
-                        hover:-translate-y-1 hover:shadow-xl 
-                        transition-all duration-300 ease-out"
-                >
+                href="/paket"
+                className="inline-flex items-center justify-center rounded-md 
+                          bg-gradient-to-r from-green-600 to-green-500 
+                          px-8 py-4 text-base font-semibold text-white 
+                          shadow-lg hover:from-green-500 hover:to-green-400 
+                          hover:-translate-y-1 hover:shadow-xl 
+                          transition-all duration-300 ease-out"
+              >
                 Daftar Sekarang
               </Link>
             </div>

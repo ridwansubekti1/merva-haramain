@@ -13,9 +13,9 @@ const galleryData = [
 
 export default function Gallery() {
   return (
-    <div className="relative bg-gradient-to-b from-green-50 to-green-100 py-16 sm:py-20">
+    <div className="relative bg-gradient-to-b from-white via-emerald-50 to-white py-16 sm:py-20">
       {/* Judul */}
-      <h2 className="relative text-3xl font-bold text-center text-green-800 mb-10 z-10">
+      <h2 className="relative text-3xl font-bold text-center text-emerald-800 mb-10 z-10">
         Galeri Perjalanan Umroh
       </h2>
 
@@ -36,7 +36,7 @@ export default function Gallery() {
               className="w-full h-48 object-cover"
             />
             <div className="p-4">
-              <h3 className="text-lg font-semibold text-green-700">
+              <h3 className="text-lg font-semibold text-emerald-700">
                 {item.title}
               </h3>
               <p className="text-gray-600 mt-1 text-sm">{item.description}</p>
@@ -44,9 +44,6 @@ export default function Gallery() {
           </motion.div>
         ))}
       </div>
-
-      {/* Fade transisi ke Mitra */}
-      <div className="absolute left-0 bottom-0 w-full h-20 bg-gradient-to-b from-transparent to-green-200 pointer-events-none" />
     </div>
   );
 }

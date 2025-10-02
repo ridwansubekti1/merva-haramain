@@ -17,7 +17,7 @@ export default function Home() {
     <PaketCard/>
     <Galeri/>
     <Mitra/>
-    {/* <Testimoni/> */}
+    <Testimoni/>
     <ScrollToTop/>
     </>
   );

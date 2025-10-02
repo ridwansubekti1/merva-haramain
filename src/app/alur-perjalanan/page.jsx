@@ -86,16 +86,19 @@ const stepsMekkahFirst = [
 export default function AlurPerjalanan() {
   return (
     <section className="relative w-full py-16 sm:py-20 bg-gradient-to-b from-green-50 via-white to-green-100">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-28">
+        
         {/* Versi 1: Madinah First */}
         <AlurBlock
           title="Alur Umroh (Jakarta → Madinah → Mekkah)"
           steps={stepsMadinahFirst}
           mapSide="right"
           coords={[
-            { x: 80, y: 250, label: "Jakarta" },
-            { x: 300, y: 100, label: "Madinah" },
-            { x: 350, y: 220, label: "Mekkah" },
+            { x: 50, y: 50, label: 'Jakarta' },
+            { x: 200, y: 100, label: 'Jeddah' },
+            { x: 350, y: 80, label: 'Madinah' },
+            { x: 400, y: 200, label: 'Mekah' },
+            { x: 220, y: 300, label: 'Jeddah' },
           ]}
         />
 
@@ -105,9 +108,11 @@ export default function AlurPerjalanan() {
           steps={stepsMekkahFirst}
           mapSide="left"
           coords={[
-            { x: 80, y: 250, label: "Jakarta" },
-            { x: 350, y: 220, label: "Mekkah" },
-            { x: 300, y: 100, label: "Madinah" },
+            { x: 50, y: 50, label: 'Jakarta' },
+            { x: 200, y: 100, label: 'Jeddah' },
+            { x: 350, y: 80, label: 'Mekkah' },
+            { x: 400, y: 200, label: 'Madinah' },
+            { x: 220, y: 300, label: 'Jeddah' },
           ]}
         />
       </div>
@@ -128,7 +133,7 @@ function AlurBlock({ title, steps, mapSide, coords }) {
           mapSide === "left" ? "lg:grid-flow-dense" : ""
         }`}
       >
-        {/* Timeline Tengah */}
+        {/* Timeline */}
         <div className="relative">
           {/* garis tengah */}
           <div className="absolute left-1/2 top-0 w-1 bg-green-600 h-full transform -translate-x-1/2 hidden sm:block"></div>
@@ -140,7 +145,7 @@ function AlurBlock({ title, steps, mapSide, coords }) {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.4 }} // lebih cepat
+                transition={{ duration: 0.4 }}
                 className={`relative flex sm:items-center ${
                   idx % 2 === 0 ? "sm:justify-start" : "sm:justify-end"
                 }`}
@@ -166,13 +171,13 @@ function AlurBlock({ title, steps, mapSide, coords }) {
           </div>
         </div>
 
-        {/* Peta Interaktif */}
+        {/* Map Sticky */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="relative bg-white p-5 sm:p-6 rounded-2xl shadow-lg border border-green-200"
+          className="relative bg-white p-5 sm:p-6 rounded-2xl shadow-lg border border-green-200 lg:sticky lg:top-24 h-fit"
         >
           <h3 className="text-base sm:text-lg font-semibold text-green-800 mb-4 text-center">
             Rute Perjalanan
@@ -212,7 +217,7 @@ function AlurBlock({ title, steps, mapSide, coords }) {
               </g>
             ))}
 
-            {/* Pesawat bergerak */}
+            {/* Pesawat animasi */}
             <motion.text
               initial={{ x: coords[0].x, y: coords[0].y }}
               animate={{
@@ -227,7 +232,7 @@ function AlurBlock({ title, steps, mapSide, coords }) {
               }}
               className="text-lg sm:text-xl"
             >
-              🛫
+              📍
             </motion.text>
           </svg>
         </motion.div>

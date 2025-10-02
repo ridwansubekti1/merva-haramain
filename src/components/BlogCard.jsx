@@ -54,7 +54,7 @@ export default function Articles() {
   }
 
   return (
-    <div className="relative bg-gradient-to-b from-emerald-50 via-white to-emerald-50 py-20">
+    <div className="relative bg-gradient-to-b from-white via-emerald-50 to-white py-20">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Header */}
         <div className="mx-auto max-w-2xl text-center lg:max-w-3xl">
@@ -66,7 +66,6 @@ export default function Articles() {
           </p>
         </div>
 
-        {/* Grid Artikel with reveal */}
         <motion.div
           variants={container}
           initial="hidden"
@@ -78,7 +77,8 @@ export default function Articles() {
             <motion.article
               key={post.id}
               variants={fadeUp}
-              className="flex flex-col overflow-hidden rounded-2xl border border-emerald-100 bg-white shadow-sm transition-all duration-300 hover:shadow-lg hover:shadow-emerald-200/50 hover:scale-[1.02]"
+              className="flex flex-col overflow-hidden rounded-2xl border border-emerald-100 bg-white shadow-sm 
+                         transition-all duration-300 hover:shadow-lg hover:shadow-emerald-200/50 hover:scale-[1.02]"
             >
               {/* Thumbnail + Badge */}
               <div className="relative aspect-[16/10] w-full overflow-hidden">

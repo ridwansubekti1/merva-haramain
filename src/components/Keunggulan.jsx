@@ -9,7 +9,7 @@ export default function Features() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.3, // jeda antar card
+        staggerChildren: 0.3,
       },
     },
   }
@@ -21,8 +21,8 @@ export default function Features() {
   }
 
   return (
-    <div className="relative bg-gradient-to-b from-emerald-50 via-white to-emerald-50 py-24 sm:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <div className="relative bg-gradient-to-b from-white via-emerald-50 to-white py-24 sm:py-32">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
         {/* Judul */}
         <h2 className="text-center text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
           Bersama <span className="text-emerald-600">Merva Haramain</span>
@@ -44,7 +44,7 @@ export default function Features() {
           >
             <div className="px-6 pt-6 pb-4 text-center">
               <Star className="mx-auto h-8 w-8 text-emerald-500" />
-              <p className="mt-3 text-lg font-semibold text-gray-900 transition-colors duration-300 group-hover:text-emerald-600">
+              <p className="mt-3 text-lg font-semibold text-gray-900 group-hover:text-emerald-600 transition-colors">
                 Murah tapi Mewah
               </p>
               <p className="mt-2 text-sm text-gray-600">
@@ -68,7 +68,7 @@ export default function Features() {
           >
             <div className="px-6 pt-6 pb-4 text-center">
               <Heart className="mx-auto h-8 w-8 text-emerald-500" />
-              <p className="mt-3 text-lg font-semibold text-gray-900 transition-colors duration-300 group-hover:text-emerald-600">
+              <p className="mt-3 text-lg font-semibold text-gray-900 group-hover:text-emerald-600 transition-colors">
                 Melayani dengan Maksimal
               </p>
               <p className="mt-2 text-sm text-gray-600">
@@ -92,7 +92,7 @@ export default function Features() {
           >
             <div className="px-6 pt-6 pb-4 text-center">
               <Globe className="mx-auto h-8 w-8 text-emerald-500" />
-              <p className="mt-3 text-lg font-semibold text-gray-900 transition-colors duration-300 group-hover:text-emerald-600">
+              <p className="mt-3 text-lg font-semibold text-gray-900 group-hover:text-emerald-600 transition-colors">
                 Mudah dan Mantap
               </p>
               <p className="mt-2 text-sm text-gray-600">
