@@ -85,8 +85,8 @@ const stepsMekkahFirst = [
 
 export default function AlurPerjalanan() {
   return (
-    <section className="relative w-full py-20 bg-gradient-to-b from-green-50 via-white to-green-100">
-      <div className="max-w-6xl mx-auto px-6 lg:px-8 space-y-24">
+    <section className="relative w-full py-16 sm:py-20 bg-gradient-to-b from-green-50 via-white to-green-100">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
         {/* Versi 1: Madinah First */}
         <AlurBlock
           title="Alur Umroh (Jakarta → Madinah → Mekkah)"
@@ -120,45 +120,45 @@ function AlurBlock({ title, steps, mapSide, coords }) {
   return (
     <div>
       <div className="text-center mb-10">
-        <h2 className="text-2xl font-bold text-green-800">{title}</h2>
+        <h2 className="text-2xl sm:text-3xl font-bold text-green-800">{title}</h2>
       </div>
 
       <div
-        className={`grid lg:grid-cols-2 gap-12 items-start ${
+        className={`grid gap-10 lg:gap-12 items-start lg:grid-cols-2 ${
           mapSide === "left" ? "lg:grid-flow-dense" : ""
         }`}
       >
         {/* Timeline Tengah */}
         <div className="relative">
           {/* garis tengah */}
-          <div className="absolute left-1/2 top-0 w-1 bg-green-600 h-full transform -translate-x-1/2"></div>
+          <div className="absolute left-1/2 top-0 w-1 bg-green-600 h-full transform -translate-x-1/2 hidden sm:block"></div>
 
-          <div className="space-y-12">
+          <div className="space-y-10">
             {steps.map((step, idx) => (
               <motion.div
                 key={step.id}
-                initial={{ opacity: 0, y: 40 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: idx * 0.2 }}
-                className={`relative flex items-center ${
-                  idx % 2 === 0 ? "justify-start" : "justify-end"
+                transition={{ duration: 0.4 }} // lebih cepat
+                className={`relative flex sm:items-center ${
+                  idx % 2 === 0 ? "sm:justify-start" : "sm:justify-end"
                 }`}
               >
                 {/* konten */}
                 <div
-                  className={`w-5/12 p-6 rounded-2xl shadow-md bg-white border border-green-200 ${
-                    idx % 2 === 0 ? "text-left" : "text-right"
+                  className={`w-full sm:w-5/12 p-5 sm:p-6 rounded-2xl shadow-md bg-white border border-green-200 ${
+                    idx % 2 === 0 ? "sm:text-left" : "sm:text-right"
                   }`}
                 >
-                  <h3 className="text-lg font-semibold text-green-800">
+                  <h3 className="text-base sm:text-lg font-semibold text-green-800">
                     {step.title}
                   </h3>
-                  <p className="mt-2 text-gray-600">{step.description}</p>
+                  <p className="mt-2 text-sm sm:text-base text-gray-600">{step.description}</p>
                 </div>
 
                 {/* icon di tengah */}
-                <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center w-12 h-12 rounded-full bg-green-600 shadow-lg">
+                <div className="hidden sm:flex absolute left-1/2 transform -translate-x-1/2 items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-green-600 shadow-lg">
                   {step.icon}
                 </div>
               </motion.div>
@@ -168,21 +168,29 @@ function AlurBlock({ title, steps, mapSide, coords }) {
 
         {/* Peta Interaktif */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="relative bg-white p-6 rounded-2xl shadow-lg border border-green-200"
+          transition={{ duration: 0.5 }}
+          className="relative bg-white p-5 sm:p-6 rounded-2xl shadow-lg border border-green-200"
         >
-          <h3 className="text-lg font-semibold text-green-800 mb-4 text-center">
+          <h3 className="text-base sm:text-lg font-semibold text-green-800 mb-4 text-center">
             Rute Perjalanan
           </h3>
-          <svg viewBox="0 0 500 350" xmlns="http://www.w3.org/2000/svg" className="w-full h-72">
+          <svg
+            viewBox="0 0 500 350"
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-full h-64 sm:h-72"
+          >
             {/* Titik + Label */}
             {coords.map((c, i) => (
               <g key={i}>
-                <circle cx={c.x} cy={c.y} r="10" fill="#16a34a" />
-                <text x={c.x + 15} y={c.y + 5} className="text-sm fill-gray-700">
+                <circle cx={c.x} cy={c.y} r="8" fill="#16a34a" />
+                <text
+                  x={c.x + 15}
+                  y={c.y + 5}
+                  className="text-[10px] sm:text-sm fill-gray-700"
+                >
                   {c.label}
                 </text>
                 {i > 0 && (
@@ -192,13 +200,13 @@ function AlurBlock({ title, steps, mapSide, coords }) {
                     x2={c.x}
                     y2={c.y}
                     stroke="#16a34a"
-                    strokeWidth="3"
+                    strokeWidth="2.5"
                     strokeDasharray="300"
                     strokeDashoffset="300"
                     initial={{ strokeDashoffset: 300 }}
                     whileInView={{ strokeDashoffset: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 2, delay: i * 1.5, ease: "easeInOut" }}
+                    transition={{ duration: 1.2, ease: "easeInOut" }}
                   />
                 )}
               </g>
@@ -212,12 +220,12 @@ function AlurBlock({ title, steps, mapSide, coords }) {
                 y: coords.map((c) => c.y),
               }}
               transition={{
-                duration: 8,
+                duration: 6,
                 ease: "easeInOut",
                 repeat: Infinity,
-                repeatDelay: 2,
+                repeatDelay: 1,
               }}
-              className="text-xl"
+              className="text-lg sm:text-xl"
             >
               🛫
             </motion.text>

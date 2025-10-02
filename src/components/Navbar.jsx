@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 const navigation = [
   { name: 'Beranda', href: '/' },
@@ -15,6 +16,7 @@ const navigation = [
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const pathname = usePathname()
 
   return (
     <header className="sticky top-0 z-50 backdrop-blur-md bg-white/80 dark:bg-gray-900/80 shadow-sm">
@@ -54,17 +56,22 @@ export default function Header() {
 
         {/* Desktop Nav */}
         <div className="hidden lg:flex lg:flex-1 lg:justify-center lg:gap-x-8">
-          {navigation.map((item) => (
-            <Link
-              key={item.name}
-              href={item.href}
-              className="text-sm font-semibold text-gray-900 dark:text-white 
-                         hover:text-green-600 transition-colors duration-200 
-                         whitespace-nowrap"
-            >
-              {item.name}
-            </Link>
-          ))}
+          {navigation.map((item) => {
+            const isActive = pathname === item.href
+            return (
+              <Link
+                key={item.name}
+                href={item.href}
+                className={`text-sm font-semibold transition-colors duration-200 whitespace-nowrap 
+                  ${isActive 
+                    ? 'text-green-600 dark:text-green-400' 
+                    : 'text-gray-900 dark:text-white hover:text-green-600'
+                  }`}
+              >
+                {item.name}
+              </Link>
+            )
+          })}
         </div>
 
         {/* Desktop CTA */}
@@ -119,18 +126,24 @@ export default function Header() {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10 dark:divide-white/10">
               <div className="space-y-2 py-6">
-                {navigation.map((item) => (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold 
-                               text-gray-900 hover:bg-green-50 dark:text-white 
-                               dark:hover:bg-green-900/10 transition-colors duration-200"
-                  >
-                    {item.name}
-                  </Link>
-                ))}
+                {navigation.map((item) => {
+                  const isActive = pathname === item.href
+                  return (
+                    <Link
+                      key={item.name}
+                      href={item.href}
+                      onClick={() => setMobileMenuOpen(false)}
+                      className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold 
+                        transition-colors duration-200 
+                        ${isActive 
+                          ? 'bg-green-50 text-green-700 dark:bg-green-900/20 dark:text-green-400' 
+                          : 'text-gray-900 hover:bg-green-50 dark:text-white dark:hover:bg-green-900/10'
+                        }`}
+                    >
+                      {item.name}
+                    </Link>
+                  )
+                })}
               </div>
 
               {/* Mobile CTA */}

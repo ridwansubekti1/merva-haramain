@@ -74,7 +74,6 @@ function classNames(...classes) {
 }
 
 export default function Pricing() {
-  // Animasi container
   const container = {
     hidden: { opacity: 0 },
     visible: {
@@ -83,7 +82,6 @@ export default function Pricing() {
     },
   }
 
-  // Animasi tiap card
   const fadeUp = {
     hidden: { opacity: 0, y: 40 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
@@ -101,7 +99,6 @@ export default function Pricing() {
         Tiga pilihan paket dengan pelayanan ramah, fasilitas lengkap, dan pengalaman ibadah tak terlupakan.
       </p>
 
-      {/* Grid Pricing with animation */}
       <motion.div
         variants={container}
         initial="hidden"
@@ -115,7 +112,7 @@ export default function Pricing() {
             variants={fadeUp}
             className={classNames(
               tier.featured
-                ? 'relative bg-white border-2 border-yellow-400 shadow-xl shadow-emerald-200 transform scale-[1.03]'
+                ? 'relative bg-emerald-50 border-2 border-yellow-400 shadow-2xl shadow-emerald-200 transform scale-[1.07]'
                 : 'bg-white border-2 border-emerald-200 shadow-lg shadow-emerald-100',
               'rounded-3xl overflow-hidden transition-all duration-500 hover:scale-105 hover:shadow-emerald-400/40 hover:shadow-2xl'
             )}
@@ -124,7 +121,7 @@ export default function Pricing() {
             <div
               className={classNames(
                 tier.featured
-                  ? 'bg-gradient-to-r from-yellow-400 to-emerald-500'
+                  ? 'bg-gradient-to-r from-yellow-400 via-emerald-500 to-emerald-700'
                   : 'bg-gradient-to-r from-emerald-500 to-emerald-300',
                 'h-2 w-full'
               )}
@@ -132,9 +129,9 @@ export default function Pricing() {
 
             {/* Badge untuk featured */}
             {tier.featured && (
-              <span className="absolute top-2 left-1/2 -translate-x-1/2 inline-flex items-center gap-1 rounded-full bg-yellow-400 px-3 py-1 text-xs font-semibold text-emerald-900 shadow-md">
-                <StarIcon className="h-4 w-4 text-emerald-900" />
-                Paling Populer
+              <span className="absolute top-2 left-1/2 -translate-x-1/2 inline-flex items-center gap-1 rounded-full bg-yellow-400 px-4 py-1.5 text-sm font-bold text-emerald-900 shadow-lg ring-2 ring-emerald-500/60 animate-pulse">
+                <StarIcon className="h-5 w-5 text-emerald-900" />
+                Rekomendasi
               </span>
             )}
 

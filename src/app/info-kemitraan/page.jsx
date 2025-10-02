@@ -27,33 +27,48 @@ export default function InfoKemitraan() {
   return (
     <section className="bg-gradient-to-b from-green-50 via-white to-green-100">
       {/* Hero */}
-      <div className="relative text-center py-20 bg-green-700 text-white">
-        <h1 className="text-4xl sm:text-5xl font-bold">Informasi Kemitraan</h1>
-        <p className="mt-4 max-w-2xl mx-auto text-lg text-green-100">
+      <div className="relative text-center py-16 sm:py-20 bg-green-700 text-white">
+        <motion.h1
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-3xl sm:text-4xl lg:text-5xl font-bold"
+        >
+          Informasi Kemitraan
+        </motion.h1>
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.3 }}
+          className="mt-4 max-w-2xl mx-auto text-base sm:text-lg text-green-100"
+        >
           <span className="font-semibold">Mitra Mulia, Hasil Maksimal!</span> <br />
-          Bergabunglah menjadi bagian dari <span className="font-semibold">Merva Haramain</span>.
-        </p>
+          Bergabunglah menjadi bagian dari{" "}
+          <span className="font-semibold">Merva Haramain</span>.
+        </motion.p>
       </div>
 
-      <div className="max-w-6xl mx-auto px-6 lg:px-8 py-20 space-y-20">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20 space-y-16 sm:space-y-20">
         {/* Peluang Kemitraan */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="bg-white rounded-2xl shadow-lg border border-green-200 p-10 text-center"
+          className="bg-white rounded-2xl shadow-lg border border-green-200 p-6 sm:p-10 text-center"
         >
-          <h2 className="text-2xl font-bold text-green-800 mb-4">Peluang Kemitraan</h2>
-          <p className="text-gray-600 leading-relaxed max-w-3xl mx-auto">
-            Kami membuka peluang keagenan travel umrah di seluruh Indonesia. 
-            Bergabunglah bersama kami untuk meraih hasil maksimal dengan dukungan fasilitas terbaik 
-            dan layanan profesional.
+          <h2 className="text-xl sm:text-2xl font-bold text-green-800 mb-4">
+            Peluang Kemitraan
+          </h2>
+          <p className="text-gray-600 leading-relaxed max-w-3xl mx-auto text-sm sm:text-base">
+            Kami membuka peluang keagenan travel umrah di seluruh Indonesia.
+            Bergabunglah bersama kami untuk meraih hasil maksimal dengan dukungan
+            fasilitas terbaik dan layanan profesional.
           </p>
-          <div className="mt-8 flex flex-col sm:flex-row justify-center gap-6">
+          <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
             <a
               href="tel:+628123456789"
-              className="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-500 text-white px-6 py-3 rounded-xl shadow-md transition"
+              className="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-500 text-white px-5 py-3 rounded-xl shadow-md transition text-sm sm:text-base"
             >
               <Phone className="w-5 h-5" /> +62 812-3456-789
             </a>
@@ -61,7 +76,7 @@ export default function InfoKemitraan() {
               href="https://www.mervaharamain.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 bg-green-100 hover:bg-green-200 text-green-800 px-6 py-3 rounded-xl shadow-md transition"
+              className="flex items-center justify-center gap-2 bg-green-100 hover:bg-green-200 text-green-800 px-5 py-3 rounded-xl shadow-md transition text-sm sm:text-base"
             >
               <Globe className="w-5 h-5" /> www.mervaharamain.com
             </a>
@@ -70,30 +85,36 @@ export default function InfoKemitraan() {
 
         {/* Hubungi Kami */}
         <div>
-          <h2 className="text-2xl font-bold text-green-800 text-center mb-8">Hubungi Kami</h2>
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div className="space-y-4">
+          <h2 className="text-xl sm:text-2xl font-bold text-green-800 text-center mb-8">
+            Hubungi Kami
+          </h2>
+          <div className="grid md:grid-cols-2 gap-8 items-start">
+            {/* Kontak */}
+            <div className="space-y-4 text-sm sm:text-base">
               <div className="flex items-start gap-3">
-                <MapPin className="w-6 h-6 text-green-600 mt-1" />
+                <MapPin className="w-6 h-6 text-green-600 mt-1 flex-shrink-0" />
                 <p className="text-gray-700">
-                  1.	Perumahan Grand Mulia Kalisuren A. 3/11, Kampung Cina Desa/Kelurahan Tajurhalang, 
-                  Kec. Tajurhalang, Kab. Bogor, Provinsi Jawa Barat Kode Pos: 16320</p>
+                  Perumahan Grand Mulia Kalisuren A. 3/11, Kampung Cina
+                  Desa/Kelurahan Tajurhalang, Kec. Tajurhalang, Kab. Bogor,
+                  Provinsi Jawa Barat Kode Pos: 16320
+                </p>
               </div>
               <div className="flex items-start gap-3">
-                <Phone className="w-6 h-6 text-green-600 mt-1" />
+                <Phone className="w-6 h-6 text-green-600 mt-1 flex-shrink-0" />
                 <p className="text-gray-700">+62 812-3456-789</p>
               </div>
               <div className="flex items-start gap-3">
-                <Globe className="w-6 h-6 text-green-600 mt-1" />
+                <Globe className="w-6 h-6 text-green-600 mt-1 flex-shrink-0" />
                 <p className="text-gray-700">www.mervaharamain.com</p>
               </div>
             </div>
 
-            <div className="rounded-2xl overflow-hidden shadow-lg border border-green-200">
+            {/* Maps */}
+            <div className="rounded-2xl overflow-hidden shadow-lg border border-green-200 h-64 sm:h-72 lg:h-80">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.235172264918!2d106.74450831537832!3d-6.465660060818591!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ec2f15ab123b%3A0x123456789abcdef!2sLokasi+Contoh!5e0!3m2!1sid!2sid!4v1759328508935"
                 width="100%"
-                height="250"
+                height="100%"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
@@ -109,9 +130,11 @@ export default function InfoKemitraan() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="bg-white rounded-2xl shadow-lg border border-green-200 p-10"
+          className="bg-white rounded-2xl shadow-lg border border-green-200 p-6 sm:p-10"
         >
-          <h2 className="text-2xl font-bold text-green-800 text-center mb-6">Form Pendaftaran Kemitraan</h2>
+          <h2 className="text-xl sm:text-2xl font-bold text-green-800 text-center mb-6">
+            Form Pendaftaran Kemitraan
+          </h2>
           <form onSubmit={handleSubmit} className="grid gap-6 md:grid-cols-2">
             {[
               { label: "Nama Lengkap", name: "nama", type: "text", icon: User, placeholder: "Masukkan nama lengkap" },
@@ -120,16 +143,16 @@ export default function InfoKemitraan() {
               { label: "Kota Asal", name: "kota", type: "text", icon: Home, placeholder: "Masukkan kota asal" },
             ].map((field) => (
               <div className="flex flex-col" key={field.name}>
-                <label className="mb-2 font-medium text-gray-700">{field.label}</label>
+                <label className="mb-2 font-medium text-gray-700 text-sm sm:text-base">{field.label}</label>
                 <div className="flex items-center border rounded-lg px-3">
-                  <field.icon className="text-green-600 w-5 h-5 mr-2" />
+                  <field.icon className="text-green-600 w-5 h-5 mr-2 flex-shrink-0" />
                   <input
                     type={field.type}
                     name={field.name}
                     value={formData[field.name]}
                     onChange={handleChange}
                     required
-                    className="w-full py-2 outline-none"
+                    className="w-full py-2 outline-none text-sm sm:text-base"
                     placeholder={field.placeholder}
                   />
                 </div>
@@ -138,7 +161,7 @@ export default function InfoKemitraan() {
             <div className="md:col-span-2 text-center mt-4">
               <button
                 type="submit"
-                className="bg-green-600 hover:bg-green-500 text-white px-8 py-3 rounded-xl shadow-md transition"
+                className="bg-green-600 hover:bg-green-500 text-white px-6 sm:px-8 py-3 rounded-xl shadow-md transition text-sm sm:text-base"
               >
                 Kirim Pendaftaran
               </button>
