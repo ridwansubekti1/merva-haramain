@@ -19,11 +19,11 @@ export default function Features() {
   }
 
   return (
-    <section className="relative bg-gradient-to-b from-white via-emerald-50 to-white py-24 sm:py-32">
+    <section className="relative bg-gradient-to-b from-white via-[#e4e4ff] to-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10 text-center">
         {/* Judul */}
         <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-          Bersama <span className="text-emerald-600">Merva Haramain</span>
+          Bersama <span className="text-[#1f1d59]">Merva Haramain</span>
         </h2>
 
         {/* Grid Card */}
@@ -37,11 +37,11 @@ export default function Features() {
           {/* Card 1 - Murah tapi Mewah */}
           <motion.div
             variants={fadeUp}
-            className="group rounded-2xl bg-white p-8 shadow-sm ring-1 ring-emerald-100 
-                       transition-all duration-300 hover:shadow-lg hover:shadow-emerald-200/50 hover:scale-[1.02]"
+            className="group rounded-2xl bg-white p-8 shadow-sm ring-1 ring-[#b9b8ff]
+                       transition-all duration-300 hover:shadow-lg hover:shadow-[#c9c8ff]/60 hover:scale-[1.02]"
           >
-            <Banknote className="mx-auto h-10 w-10 text-emerald-500" />
-            <h3 className="mt-4 text-lg font-semibold text-gray-900 group-hover:text-emerald-600 transition-colors">
+            <Banknote className="mx-auto h-10 w-10 text-[#1f1d59]" />
+            <h3 className="mt-4 text-lg font-semibold text-gray-900 group-hover:text-[#1f1d59] transition-colors">
               Murah tapi Mewah
             </h3>
             <p className="mt-2 text-sm text-gray-600">
@@ -52,11 +52,11 @@ export default function Features() {
           {/* Card 2 - Melayani dengan Maksimal */}
           <motion.div
             variants={fadeUp}
-            className="group rounded-2xl bg-white p-8 shadow-sm ring-1 ring-emerald-100 
-                       transition-all duration-300 hover:shadow-lg hover:shadow-emerald-200/50 hover:scale-[1.02]"
+            className="group rounded-2xl bg-white p-8 shadow-sm ring-1 ring-[#b9b8ff]
+                       transition-all duration-300 hover:shadow-lg hover:shadow-[#c9c8ff]/60 hover:scale-[1.02]"
           >
-            <Heart className="mx-auto h-10 w-10 text-emerald-500" />
-            <h3 className="mt-4 text-lg font-semibold text-gray-900 group-hover:text-emerald-600 transition-colors">
+            <Heart className="mx-auto h-10 w-10 text-[#1f1d59]" />
+            <h3 className="mt-4 text-lg font-semibold text-gray-900 group-hover:text-[#1f1d59] transition-colors">
               Melayani dengan Maksimal
             </h3>
             <p className="mt-2 text-sm text-gray-600">
@@ -67,11 +67,11 @@ export default function Features() {
           {/* Card 3 - Mudah dan Mantap */}
           <motion.div
             variants={fadeUp}
-            className="group rounded-2xl bg-white p-8 shadow-sm ring-1 ring-emerald-100 
-                       transition-all duration-300 hover:shadow-lg hover:shadow-emerald-200/50 hover:scale-[1.02]"
+            className="group rounded-2xl bg-white p-8 shadow-sm ring-1 ring-[#b9b8ff]
+                       transition-all duration-300 hover:shadow-lg hover:shadow-[#c9c8ff]/60 hover:scale-[1.02]"
           >
-            <Sparkles className="mx-auto h-10 w-10 text-emerald-500" />
-            <h3 className="mt-4 text-lg font-semibold text-gray-900 group-hover:text-emerald-600 transition-colors">
+            <Sparkles className="mx-auto h-10 w-10 text-[#1f1d59]" />
+            <h3 className="mt-4 text-lg font-semibold text-gray-900 group-hover:text-[#1f1d59] transition-colors">
               Mudah dan Mantap
             </h3>
             <p className="mt-2 text-sm text-gray-600">

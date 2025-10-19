@@ -90,7 +90,7 @@ export default function Pricing() {
   return (
     <div className="relative isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
       <div className="mx-auto max-w-4xl text-center">
-        <h2 className="text-base font-semibold text-emerald-600">Harga Terbaik</h2>
+        <h2 className="text-base font-semibold" style={{ color: '#1f1d59' }}>Harga Terbaik</h2>
         <p className="mt-2 text-5xl font-semibold tracking-tight text-gray-900 sm:text-6xl">
           Pilih sesuai kebutuhanmu
         </p>
@@ -112,31 +112,31 @@ export default function Pricing() {
             variants={fadeUp}
             className={classNames(
               tier.featured
-                ? 'relative bg-emerald-50 border-2 border-yellow-400 shadow-2xl shadow-emerald-200 transform scale-[1.07]'
-                : 'bg-white border-2 border-emerald-200 shadow-lg shadow-emerald-100',
-              'rounded-3xl overflow-hidden transition-all duration-500 hover:scale-105 hover:shadow-emerald-400/40 hover:shadow-2xl'
+                ? 'relative bg-[#f6f6ff] border-2 border-yellow-400 shadow-2xl shadow-[#1f1d59]/30 transform scale-[1.07]'
+                : 'bg-white border-2 border-[#d1d1f5] shadow-lg shadow-[#1f1d59]/20',
+              'rounded-3xl overflow-hidden transition-all duration-500 hover:scale-105 hover:shadow-[#1f1d59]/50 hover:shadow-2xl'
             )}
           >
             {/* Gradient Header */}
             <div
               className={classNames(
                 tier.featured
-                  ? 'bg-gradient-to-r from-yellow-400 via-emerald-500 to-emerald-700'
-                  : 'bg-gradient-to-r from-emerald-500 to-emerald-300',
+                  ? 'bg-gradient-to-r from-yellow-400 via-[#1f1d59] to-[#1f1d59]'
+                  : 'bg-gradient-to-r from-[#1f1d59] to-[#4b49a0]',
                 'h-2 w-full'
               )}
             />
 
             {/* Badge untuk featured */}
             {tier.featured && (
-              <span className="absolute top-2 left-1/2 -translate-x-1/2 inline-flex items-center gap-1 rounded-full bg-yellow-400 px-4 py-1.5 text-sm font-bold text-emerald-900 shadow-lg ring-2 ring-emerald-500/60 animate-pulse">
-                <StarIcon className="h-5 w-5 text-emerald-900" />
+              <span className="absolute top-2 left-1/2 -translate-x-1/2 inline-flex items-center gap-1 rounded-full bg-yellow-400 px-4 py-1.5 text-sm font-bold text-[#1f1d59] shadow-lg ring-2 ring-[#1f1d59]/40 animate-pulse">
+                <StarIcon className="h-5 w-5 text-[#1f1d59]" />
                 Rekomendasi
               </span>
             )}
 
             <div className="p-8 sm:p-10">
-              <h3 id={tier.id} className="text-emerald-600 text-sm font-semibold">
+              <h3 id={tier.id} className="text-sm font-semibold" style={{ color: '#1f1d59' }}>
                 {tier.name}
               </h3>
               <p className="mt-4 flex items-baseline gap-x-2">
@@ -149,7 +149,7 @@ export default function Pricing() {
               <ul role="list" className="mt-8 space-y-3 text-sm text-gray-600 sm:mt-10">
                 {tier.features.map((feature, idx) => (
                   <li key={idx} className="flex gap-x-3">
-                    <CheckIcon aria-hidden="true" className="h-5 w-5 flex-none text-emerald-600" />
+                    <CheckIcon aria-hidden="true" className="h-5 w-5 flex-none" style={{ color: '#1f1d59' }} />
                     {feature}
                   </li>
                 ))}
@@ -160,10 +160,15 @@ export default function Pricing() {
                 aria-describedby={tier.id}
                 className={classNames(
                   tier.featured
-                    ? 'bg-emerald-600 text-white shadow-md hover:bg-emerald-500'
-                    : 'text-emerald-600 ring-1 ring-emerald-200 hover:ring-emerald-300',
+                    ? 'text-white shadow-md hover:opacity-90'
+                    : 'ring-1 hover:ring-[#1f1d59] text-[#1f1d59]',
                   'mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold sm:mt-10 transition-all'
                 )}
+                style={
+                  tier.featured
+                    ? { backgroundColor: '#1f1d59' }
+                    : { borderColor: '#1f1d59' }
+                }
               >
                 Pilih Paket
               </a>

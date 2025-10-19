@@ -4,18 +4,20 @@ import { motion } from "framer-motion"
 
 export default function Mitra() {
   return (
-    <div className="relative bg-gradient-to-b from-white via-emerald-50 to-white py-20 sm:py-28">
+    <div className="relative bg-gradient-to-b from-white via-[#1f1d59]/5 to-white py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        {/* Judul */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center text-lg font-semibold text-emerald-800"
+          className="text-center text-lg font-semibold text-[#1f1d59]"
         >
           Dipercaya oleh jamaah & partner terbaik
         </motion.h2>
 
+        {/* Logo Mitra */}
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -46,18 +48,24 @@ export default function Mitra() {
               alt: "Statamic",
             },
           ].map((logo, i) => (
-            <motion.img
+            <motion.div
               key={i}
-              src={logo.src}
-              alt={logo.alt}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: i * 0.15 }}
               viewport={{ once: true }}
-              className={`col-span-2 max-h-12 w-full object-contain lg:col-span-1 hover:scale-110 transition-transform ${
-                i === 4 ? "col-start-2 sm:col-start-auto" : ""
-              }`}
-            />
+              className={`col-span-2 flex justify-center items-center p-4 rounded-xl bg-white 
+                          shadow-sm border border-[#1f1d59]/15 hover:shadow-md hover:shadow-[#1f1d59]/20 
+                          hover:scale-105 transition-all duration-300 lg:col-span-1 ${
+                            i === 4 ? "col-start-2 sm:col-start-auto" : ""
+                          }`}
+            >
+              <img
+                src={logo.src}
+                alt={logo.alt}
+                className="max-h-12 w-full object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
+              />
+            </motion.div>
           ))}
         </motion.div>
       </div>

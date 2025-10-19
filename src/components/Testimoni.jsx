@@ -30,7 +30,6 @@ const testimonials = [
 ]
 
 export default function Testimoni() {
-  // Parent buat stagger
   const container = {
     hidden: { opacity: 0 },
     visible: {
@@ -39,14 +38,13 @@ export default function Testimoni() {
     },
   }
 
-  // Anak (card) fadeUp
   const fadeUp = {
     hidden: { opacity: 0, y: 40 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
   }
 
   return (
-    <section className="bg-gradient-to-b from-white via-green-50 to-white py-24 sm:py-32">
+    <section className="bg-gradient-to-b from-white via-[#1f1d59]/5 to-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Heading */}
         <motion.div
@@ -56,16 +54,16 @@ export default function Testimoni() {
           viewport={{ once: true }}
           className="mx-auto max-w-2xl text-center"
         >
-          <h2 className="text-4xl font-bold tracking-tight text-green-800 sm:text-5xl">
+          <h2 className="text-4xl font-bold tracking-tight text-[#1f1d59] sm:text-5xl">
             Testimoni Jamaah
           </h2>
-          <p className="mt-4 text-lg text-gray-600">
+          <p className="mt-4 text-lg text-gray-700">
             Cerita nyata dari para jamaah yang telah mempercayakan perjalanan suci bersama{" "}
-            <span className="font-semibold text-green-700">Merva Haramain</span>.
+            <span className="font-semibold text-[#1f1d59]">Merva Haramain</span>.
           </p>
         </motion.div>
 
-        {/* Cards with stagger */}
+        {/* Cards */}
         <motion.div
           variants={container}
           initial="hidden"
@@ -77,21 +75,20 @@ export default function Testimoni() {
             <motion.div
               key={item.id}
               variants={fadeUp}
-              className="flex flex-col justify-between rounded-2xl bg-white p-8 shadow-lg border border-green-100 hover:shadow-xl transition duration-300"
+              className="flex flex-col justify-between rounded-2xl bg-white p-8 shadow-lg border border-[#1f1d59]/10 
+                         hover:shadow-xl hover:shadow-[#1f1d59]/20 transition duration-300 hover:scale-[1.02]"
             >
-              {/* Testimony */}
               <p className="text-gray-700 leading-relaxed italic">“{item.testimony}”</p>
 
-              {/* Author */}
               <div className="mt-6 flex items-center gap-x-4">
                 <img
                   alt={item.name}
                   src={item.img}
-                  className="h-12 w-12 rounded-full object-cover border-2 border-green-200 shadow-sm"
+                  className="h-12 w-12 rounded-full object-cover border-2 border-[#1f1d59]/30 shadow-sm"
                 />
                 <div>
                   <h3 className="font-semibold text-gray-900">{item.name}</h3>
-                  <p className="text-sm text-green-600">{item.role}</p>
+                  <p className="text-sm text-[#1f1d59]">{item.role}</p>
                 </div>
               </div>
             </motion.div>

@@ -25,9 +25,9 @@ export default function InfoKemitraan() {
   }
 
   return (
-    <section className="bg-gradient-to-b from-green-50 via-white to-green-100">
+    <section className="bg-gradient-to-b from-[#1f1d59]/5 via-white to-[#1f1d59]/10">
       {/* Hero */}
-      <div className="relative text-center py-16 sm:py-20 bg-green-700 text-white">
+      <div className="relative text-center py-16 sm:py-20 bg-[#1f1d59] text-white">
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -40,7 +40,7 @@ export default function InfoKemitraan() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.3 }}
-          className="mt-4 max-w-2xl mx-auto text-base sm:text-lg text-green-100"
+          className="mt-4 max-w-2xl mx-auto text-base sm:text-lg text-[#c7c6ff]"
         >
           <span className="font-semibold">Mitra Mulia, Hasil Maksimal!</span> <br />
           Bergabunglah menjadi bagian dari{" "}
@@ -55,9 +55,9 @@ export default function InfoKemitraan() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="bg-white rounded-2xl shadow-lg border border-green-200 p-6 sm:p-10 text-center"
+          className="bg-white rounded-2xl shadow-lg border border-[#1f1d59]/20 p-6 sm:p-10 text-center"
         >
-          <h2 className="text-xl sm:text-2xl font-bold text-green-800 mb-4">
+          <h2 className="text-xl sm:text-2xl font-bold text-[#1f1d59] mb-4">
             Peluang Kemitraan
           </h2>
           <p className="text-gray-600 leading-relaxed max-w-3xl mx-auto text-sm sm:text-base">
@@ -68,7 +68,7 @@ export default function InfoKemitraan() {
           <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
             <a
               href="tel:+628123456789"
-              className="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-500 text-white px-5 py-3 rounded-xl shadow-md transition text-sm sm:text-base"
+              className="flex items-center justify-center gap-2 bg-[#1f1d59] hover:bg-[#3532a1] text-white px-5 py-3 rounded-xl shadow-md transition text-sm sm:text-base"
             >
               <Phone className="w-5 h-5" /> +62 812-3456-789
             </a>
@@ -76,7 +76,7 @@ export default function InfoKemitraan() {
               href="https://www.mervaharamain.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 bg-green-100 hover:bg-green-200 text-green-800 px-5 py-3 rounded-xl shadow-md transition text-sm sm:text-base"
+              className="flex items-center justify-center gap-2 bg-[#1f1d59]/10 hover:bg-[#1f1d59]/20 text-[#1f1d59] px-5 py-3 rounded-xl shadow-md transition text-sm sm:text-base"
             >
               <Globe className="w-5 h-5" /> www.mervaharamain.com
             </a>
@@ -85,14 +85,14 @@ export default function InfoKemitraan() {
 
         {/* Hubungi Kami */}
         <div>
-          <h2 className="text-xl sm:text-2xl font-bold text-green-800 text-center mb-8">
+          <h2 className="text-xl sm:text-2xl font-bold text-[#1f1d59] text-center mb-8">
             Hubungi Kami
           </h2>
           <div className="grid md:grid-cols-2 gap-8 items-start">
             {/* Kontak */}
             <div className="space-y-4 text-sm sm:text-base">
               <div className="flex items-start gap-3">
-                <MapPin className="w-6 h-6 text-green-600 mt-1 flex-shrink-0" />
+                <MapPin className="w-6 h-6 text-[#1f1d59] mt-1 flex-shrink-0" />
                 <p className="text-gray-700">
                   Perumahan Grand Mulia Kalisuren A. 3/11, Kampung Cina
                   Desa/Kelurahan Tajurhalang, Kec. Tajurhalang, Kab. Bogor,
@@ -100,17 +100,17 @@ export default function InfoKemitraan() {
                 </p>
               </div>
               <div className="flex items-start gap-3">
-                <Phone className="w-6 h-6 text-green-600 mt-1 flex-shrink-0" />
+                <Phone className="w-6 h-6 text-[#1f1d59] mt-1 flex-shrink-0" />
                 <p className="text-gray-700">+62 812-3456-789</p>
               </div>
               <div className="flex items-start gap-3">
-                <Globe className="w-6 h-6 text-green-600 mt-1 flex-shrink-0" />
+                <Globe className="w-6 h-6 text-[#1f1d59] mt-1 flex-shrink-0" />
                 <p className="text-gray-700">www.mervaharamain.com</p>
               </div>
             </div>
 
             {/* Maps */}
-            <div className="rounded-2xl overflow-hidden shadow-lg border border-green-200 h-64 sm:h-72 lg:h-80">
+            <div className="rounded-2xl overflow-hidden shadow-lg border border-[#1f1d59]/20 h-64 sm:h-72 lg:h-80">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.235172264918!2d106.74450831537832!3d-6.465660060818591!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ec2f15ab123b%3A0x123456789abcdef!2sLokasi+Contoh!5e0!3m2!1sid!2sid!4v1759328508935"
                 width="100%"
@@ -130,9 +130,9 @@ export default function InfoKemitraan() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="bg-white rounded-2xl shadow-lg border border-green-200 p-6 sm:p-10"
+          className="bg-white rounded-2xl shadow-lg border border-[#1f1d59]/20 p-6 sm:p-10"
         >
-          <h2 className="text-xl sm:text-2xl font-bold text-green-800 text-center mb-6">
+          <h2 className="text-xl sm:text-2xl font-bold text-[#1f1d59] text-center mb-6">
             Form Pendaftaran Kemitraan
           </h2>
           <form onSubmit={handleSubmit} className="grid gap-6 md:grid-cols-2">
@@ -145,7 +145,7 @@ export default function InfoKemitraan() {
               <div className="flex flex-col" key={field.name}>
                 <label className="mb-2 font-medium text-gray-700 text-sm sm:text-base">{field.label}</label>
                 <div className="flex items-center border rounded-lg px-3">
-                  <field.icon className="text-green-600 w-5 h-5 mr-2 flex-shrink-0" />
+                  <field.icon className="text-[#1f1d59] w-5 h-5 mr-2 flex-shrink-0" />
                   <input
                     type={field.type}
                     name={field.name}
@@ -161,7 +161,7 @@ export default function InfoKemitraan() {
             <div className="md:col-span-2 text-center mt-4">
               <button
                 type="submit"
-                className="bg-green-600 hover:bg-green-500 text-white px-6 sm:px-8 py-3 rounded-xl shadow-md transition text-sm sm:text-base"
+                className="bg-[#1f1d59] hover:bg-[#3532a1] text-white px-6 sm:px-8 py-3 rounded-xl shadow-md transition text-sm sm:text-base"
               >
                 Kirim Pendaftaran
               </button>

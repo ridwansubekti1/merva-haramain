@@ -19,7 +19,7 @@ export default function Header() {
   const pathname = usePathname()
 
   return (
-    <header className="sticky top-0 z-50 backdrop-blur-md bg-white/80 dark:bg-gray-900/80 shadow-sm">
+    <header className="sticky top-0 z-50 backdrop-blur-md bg-white/80 dark:bg-[#0f0f2e]/80 shadow-sm">
       {/* Navbar Desktop & Mobile Trigger */}
       <nav
         aria-label="Global"
@@ -47,7 +47,7 @@ export default function Header() {
           <button
             type="button"
             onClick={() => setMobileMenuOpen(true)}
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 dark:text-gray-400"
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-[#1f1d59] dark:text-white"
           >
             <span className="sr-only">Open main menu</span>
             <Bars3Icon aria-hidden="true" className="size-6" />
@@ -63,9 +63,9 @@ export default function Header() {
                 key={item.name}
                 href={item.href}
                 className={`text-sm font-semibold transition-colors duration-200 whitespace-nowrap 
-                  ${isActive 
-                    ? 'text-green-600 dark:text-green-400' 
-                    : 'text-gray-900 dark:text-white hover:text-green-600'
+                  ${isActive
+                    ? 'text-[#1f1d59] dark:text-[#b8b7ff]'
+                    : 'text-gray-900 dark:text-white hover:text-[#1f1d59] dark:hover:text-[#b8b7ff]'
                   }`}
               >
                 {item.name}
@@ -78,9 +78,9 @@ export default function Header() {
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <Link
             href="/pendaftaran"
-            className="rounded-md bg-green-600 px-3.5 py-2.5 text-sm font-semibold text-white 
-                       shadow-sm hover:bg-green-500 focus-visible:outline-2 
-                       focus-visible:outline-offset-2 focus-visible:outline-green-600 
+            className="rounded-md bg-[#1f1d59] px-3.5 py-2.5 text-sm font-semibold text-white 
+                       shadow-sm hover:bg-[#2b29a3] focus-visible:outline-2 
+                       focus-visible:outline-offset-2 focus-visible:outline-[#1f1d59] 
                        transition-all duration-300 hover:scale-105 whitespace-nowrap"
           >
             Daftar Sekarang
@@ -97,7 +97,7 @@ export default function Header() {
         <div className="fixed inset-0 z-50" />
         <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto 
                                 bg-white p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 
-                                dark:bg-gray-900 dark:sm:ring-gray-100/10">
+                                dark:bg-[#0f0f2e] dark:sm:ring-white/10">
           <div className="flex items-center justify-between">
             <Link href="/" className="-m-1.5 p-1.5">
               <span className="sr-only">Merva Haramain</span>
@@ -115,7 +115,7 @@ export default function Header() {
             <button
               type="button"
               onClick={() => setMobileMenuOpen(false)}
-              className="-m-2.5 rounded-md p-2.5 text-gray-700 dark:text-gray-400"
+              className="-m-2.5 rounded-md p-2.5 text-[#1f1d59] dark:text-white"
             >
               <span className="sr-only">Close menu</span>
               <XMarkIcon aria-hidden="true" className="size-6" />
@@ -135,9 +135,9 @@ export default function Header() {
                       onClick={() => setMobileMenuOpen(false)}
                       className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold 
                         transition-colors duration-200 
-                        ${isActive 
-                          ? 'bg-green-50 text-green-700 dark:bg-green-900/20 dark:text-green-400' 
-                          : 'text-gray-900 hover:bg-green-50 dark:text-white dark:hover:bg-green-900/10'
+                        ${isActive
+                          ? 'bg-[#e6e6ff] text-[#1f1d59] dark:bg-[#2b29a3]/30 dark:text-[#b8b7ff]'
+                          : 'text-gray-900 dark:text-white hover:bg-[#e6e6ff] dark:hover:bg-[#2b29a3]/30 hover:text-[#1f1d59] dark:hover:text-[#b8b7ff]'
                         }`}
                     >
                       {item.name}
@@ -151,9 +151,9 @@ export default function Header() {
                 <Link
                   href="/pendaftaran"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="rounded-md bg-green-600 px-3.5 py-2.5 text-sm font-semibold 
-                             text-white shadow-sm hover:bg-green-500 focus-visible:outline-2 
-                             focus-visible:outline-offset-2 focus-visible:outline-green-600 
+                  className="rounded-md bg-[#1f1d59] px-3.5 py-2.5 text-sm font-semibold 
+                             text-white shadow-sm hover:bg-[#2b29a3] focus-visible:outline-2 
+                             focus-visible:outline-offset-2 focus-visible:outline-[#1f1d59] 
                              w-full text-center transition-all duration-300"
                 >
                   Daftar Sekarang

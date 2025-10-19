@@ -13,9 +13,9 @@ const galleryData = [
 
 export default function Gallery() {
   return (
-    <div className="relative bg-gradient-to-b from-white via-emerald-50 to-white py-16 sm:py-20">
+    <div className="relative bg-gradient-to-b from-white via-[#dedeff] to-white py-16 sm:py-20">
       {/* Judul */}
-      <h2 className="relative text-3xl font-bold text-center text-emerald-800 mb-10 z-10">
+      <h2 className="relative text-3xl font-bold text-center mb-10 z-10" style={{ color: "#1f1d59" }}>
         Galeri Perjalanan Umroh
       </h2>
 
@@ -24,7 +24,7 @@ export default function Gallery() {
         {galleryData.map((item, index) => (
           <motion.div
             key={item.id}
-            className="bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300"
+            className="bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300 border border-[#d1d1f5]"
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -36,7 +36,7 @@ export default function Gallery() {
               className="w-full h-48 object-cover"
             />
             <div className="p-4">
-              <h3 className="text-lg font-semibold text-emerald-700">
+              <h3 className="text-lg font-semibold" style={{ color: "#1f1d59" }}>
                 {item.title}
               </h3>
               <p className="text-gray-600 mt-1 text-sm">{item.description}</p>
